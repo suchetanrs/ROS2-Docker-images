@@ -86,3 +86,10 @@ l
 rviz2
 xeyes
 vsc
+ls
+cd ros2_ws/
+ls
+touch hi
+ls
+rm -rf hi
+ls

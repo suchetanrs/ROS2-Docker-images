@@ -12,6 +12,7 @@ services:
       - /etc/localtime:/etc/localtime:rw
       #ros-workspaces
       - ./root_dir/:/root/:rw
+      - ./ros2_ws/:/root/ros2_ws/:rw
       - ../.ros/:/root/.ros
     privileged: true
     network_mode: host
