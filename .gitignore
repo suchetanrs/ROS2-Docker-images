@@ -1,1 +1,4 @@
 root_dir/ros2_ws
+root_dir/.local
+root_dir/.pki
+root_dir/.cache
