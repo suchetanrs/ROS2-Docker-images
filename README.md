@@ -6,8 +6,8 @@ To your ```~/.bashrc``` add ```xhost +``` and source your .bashrc using ```sourc
 
 Run ```cd <cloned_repo>```
 
-1. ```sudo docker build -t jazzy-ros-image:base .``` This will build the Dockerfile to make a jazzy image.
-2. ```sudo docker compose run jazzy-image``` This will create a container of the jazzy image.
+1. ```sudo docker build -t humble-ros-image-gpu:base .``` This will build the Dockerfile to make a jazzy image.
+2. ```sudo docker compose run humble-image-gpu``` This will create a container of the jazzy image.
 
 # Inside the container
 
