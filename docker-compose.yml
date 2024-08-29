@@ -1,7 +1,7 @@
 version: "3"
 services:
-  jazzy-image:
-    image: jazzy-ros-image:base
+  humble-image-gpu:
+    image: humble-ros-image-gpu:base
     volumes:
       #full dev
       - /dev:/dev:rw
@@ -10,15 +10,25 @@ services:
       #Time
       - /etc/timezone:/etc/timezone:rw
       - /etc/localtime:/etc/localtime:rw
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
       #ros-workspaces
       - ./root_dir/:/root/:rw
-      - ./ros2_ws/:/root/ros2_ws/:rw
-      - ../.ros/:/root/.ros
+      # - ../.ros/:/root/.ros
     privileged: true
+    runtime: nvidia
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
     network_mode: host
     ipc: host
     stdin_open: true
     tty: true
     environment:
       - DISPLAY
+      - TERM
+      - QT_X11_NO_MITSHM=1
     entrypoint: /bin/bash

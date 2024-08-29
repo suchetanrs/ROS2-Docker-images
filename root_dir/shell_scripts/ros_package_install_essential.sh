@@ -6,7 +6,7 @@ apt update --fix-missing
 
 apt-get install ros-$ROS_DISTRO-turtlesim -y
 apt-get install ros-$ROS_DISTRO-rqt ros-$ROS_DISTRO-rqt-common-plugins -y
-apt-get install ros-$ROS_DISTRO-gazebo-ros-pkgs -y
+# apt-get install ros-$ROS_DISTRO-gazebo-ros-pkgs -y
 apt-get install ros-$ROS_DISTRO-rviz2 -y
 
 #Cartographer
