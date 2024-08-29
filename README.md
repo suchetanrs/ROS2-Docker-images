@@ -29,6 +29,10 @@ The ```root_dir``` and ```ros2_ws``` in the repository are mounted into the dock
 
 If you start a container using ```docker run``` like in step 2, this will create a new container. 
 
+### Option 1
+
 If you do ```sudo docker ps``` on your host machine, you can see the active containers. You can use ```docker exec -it <active_container_id> bash``` to get into an active container. If you find this to be a pain, you can use tmux.
+
+### Option 2
 
 Once you are inside the container, you can run ```tmux``` and it will start a tmux session. To split the tmux session, do ```ctrl + B``` + ```release all keys``` + ```=```. This will split the terminal horizontally. If you do ```ctrl + B``` + ```release all keys``` + ```|```, it will split the terminal vertically, all within the docker container!
